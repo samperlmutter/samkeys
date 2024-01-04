@@ -269,8 +269,8 @@
         compatible = "zmk,behavior-hold-tap";
         flavor = "tap-preferred";
         hold-trigger-on-release;
-        tapping-term-ms = <270>;
-        require-prior-idle-ms = <300>;
+        tapping-term-ms = <250>;
+        require-prior-idle-ms = <250>;
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
         retro-tap;
