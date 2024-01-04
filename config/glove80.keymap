@@ -270,6 +270,7 @@
         flavor = "tap-unless-interrupted";
         hold-trigger-on-release;
         tapping-term-ms = <270>;
+        require-prior-idle-ms = <125>;
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
         retro-tap;
@@ -285,23 +286,23 @@
 
         layer_Base {
             bindings = <
-               &kp F1                &kp F2               &kp F3                &kp F4               &kp F5                                                                                        &kp F6                &kp F7               &kp F8                   &kp F9    &kp F10
-               &trans                &kp N1               &kp N2                &kp N3               &kp N4  &kp N5                                                           &kp N6               &kp N7                &kp N8               &trans                  &kp F11    &kp F12
-               &trans                 &kp Q                &kp W                 &kp E                &kp R   &kp T                                                            &kp Y                &kp U                 &kp I                &kp O                    &kp P   &kp BSLH
-            &kp GRAVE  &my_home_mod LCTRL A  &my_home_mod LALT S  &my_home_mod LSHFT D  &my_home_mod LGUI F   &kp G                                                            &kp H  &my_home_mod RGUI J  &my_home_mod RSHFT K  &my_home_mod RALT L  &my_home_mod RCTRL SEMI    &kp SQT
-               &trans                 &kp Z                &kp X                 &kp C                &kp V   &kp B    &lower  &kp TAB   &trans   &trans   &trans     &lower   &kp N                &kp M             &kp COMMA              &kp DOT                 &kp FSLH  &kp MINUS
- &magic LAYER_Magic 0             &kp LCTRL             &kp LALT             &kp LSHFT             &kp LGUI          &kp BSPC  &kp DEL  &kp ESC  &kp ESC  &kp RET  &kp SPACE                    &kp LS(9)             &kp LS(0)             &kp LBKT                 &kp RBKT  &kp EQUAL
+               &kp F1                &kp F2               &kp F3                &kp F4               &kp F5                                                                                       &kp F6                &kp F7               &kp F8                   &kp F9    &kp F10
+               &trans                &kp N1               &kp N2                &kp N3               &kp N4  &kp N5                                                          &kp N6               &kp N7                &kp N8               &trans                  &kp F11    &kp F12
+               &trans                 &kp Q                &kp W                 &kp E                &kp R   &kp T                                                           &kp Y                &kp U                 &kp I                &kp O                    &kp P   &kp BSLH
+            &kp GRAVE  &my_home_mod LCTRL A  &my_home_mod LALT S  &my_home_mod LSHFT D  &my_home_mod LGUI F   &kp G                                                           &kp H  &my_home_mod RGUI J  &my_home_mod RSHFT K  &my_home_mod RALT L  &my_home_mod RCTRL SEMI    &kp SQT
+               &trans                 &kp Z                &kp X                 &kp C                &kp V   &kp B     &lower  &kp TAB  &trans  &trans  &kp ESC   &kp BSPC   &kp N                &kp M             &kp COMMA              &kp DOT                 &kp FSLH  &kp MINUS
+ &magic LAYER_Magic 0             &kp LCTRL             &kp LALT             &kp LSHFT             &kp LGUI          &kp LSHFT   &trans  &trans  &trans  &kp RET  &kp SPACE                    &kp LS(9)             &kp LS(0)             &kp LBKT                 &kp RBKT  &kp EQUAL
             >;
         };
 
         layer_Lower {
             bindings = <
-         &kp C_BRI_DN  &kp C_BRI_UP  &kp C_PREV   &kp C_PP  &kp C_NEXT                                                                            &kp C_MUTE  &kp C_VOL_DN     &kp C_VOL_UP        &trans  &trans
-               &trans     &kp LCTRL    &kp LALT  &kp LSHFT    &kp LGUI   &kp HOME                                                        &trans       &trans        &trans           &trans        &trans  &trans
-               &trans       &kp INS      &kp N1     &kp N2      &kp N3    &kp END                                                        &trans    &kp PRCNT      &kp FSLH  &kp KP_MULTIPLY   &kp KP_PLUS  &trans
-               &trans        &trans      &kp N4     &kp N5      &kp N6  &kp PG_UP                                                      &kp LEFT     &kp DOWN        &kp UP        &kp RIGHT  &kp KP_MINUS  &trans
-               &trans        &trans      &kp N7     &kp N8      &kp N9  &kp PG_DN  &trans    &kp CAPS  &trans  &trans  &trans  &trans    &trans  &kp KP_LPAR   &kp KP_RPAR         &kp LBKT      &kp RBKT  &trans
- &magic LAYER_Magic 0        &trans      &trans     &kp N0      &trans             &trans  &kp KP_NUM  &trans  &trans  &trans  &trans              &kp COMMA       &kp DOT         &kp LBKT      &kp RBKT  &trans
+         &kp C_BRI_DN  &kp C_BRI_UP  &kp C_PREV   &kp C_PP  &kp C_NEXT                                                                             &kp C_MUTE  &kp C_VOL_DN     &kp C_VOL_UP        &trans  &trans
+               &trans     &kp LCTRL    &kp LALT  &kp LSHFT    &kp LGUI   &kp HOME                                                         &trans       &trans        &trans           &trans        &trans  &trans
+               &trans       &kp INS      &kp N1     &kp N2      &kp N3    &kp END                                                         &trans    &kp PRCNT      &kp FSLH  &kp KP_MULTIPLY   &kp KP_PLUS  &trans
+               &trans        &trans      &kp N4     &kp N5      &kp N6  &kp PG_UP                                                       &kp LEFT     &kp DOWN        &kp UP        &kp RIGHT  &kp KP_MINUS  &trans
+               &trans        &trans      &kp N7     &kp N8      &kp N9  &kp PG_DN  &trans    &kp CAPS  &trans  &trans  &trans  &kp DEL    &trans  &kp KP_LPAR   &kp KP_RPAR         &kp LBKT      &kp RBKT  &trans
+ &magic LAYER_Magic 0        &trans      &trans     &kp N0      &trans             &trans  &kp KP_NUM  &trans  &trans  &trans   &trans              &kp COMMA       &kp DOT         &kp LBKT      &kp RBKT  &trans
             >;
         };
 
