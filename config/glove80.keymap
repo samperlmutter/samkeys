@@ -267,7 +267,7 @@
     behaviors {
     my_home_mod: my_home_mod {
         compatible = "zmk,behavior-hold-tap";
-        flavor = "tap-unless-interrupted";
+        flavor = "tap-preferred";
         hold-trigger-on-release;
         tapping-term-ms = <270>;
         require-prior-idle-ms = <300>;
