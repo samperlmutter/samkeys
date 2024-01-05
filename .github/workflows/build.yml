@@ -1,6 +1,13 @@
 name: Build
 
-on: [push, pull_request, workflow_dispatch]
+on:
+  push:
+    paths:
+      - 'config/glove80.keymap'
+  pull_request:
+    paths:
+      - 'config/glove80.keymap'
+  workflow_dispatch:n: 
 
 jobs:
   build:
@@ -25,8 +32,17 @@ jobs:
         run: nix-build config -o combined
       - name: Copy result out of nix store
         run: cp combined/glove80.uf2 glove80.uf2
-      - name: Upload result
-        uses: actions/upload-artifact@v3
+      - name: Configure Git
+        run: |
+          git config --local user.email "sam.perlmutter227@gmail.com"
+          git config --local user.name "Sam Perlmutter"
+
+      - name: Commit file
+        run: |
+          git add glove80.uf2
+          git commit -m "Add generated glove80.uf2 file"
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
         with:
-          name: glove80.uf2
-          path: glove80.uf2
+          github_token: ${{ secrets.GITHUB_TOKEN }}
