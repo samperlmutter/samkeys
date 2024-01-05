@@ -7,7 +7,7 @@ on:
   pull_request:
     paths:
       - 'config/glove80.keymap'
-  workflow_dispatch:n: 
+  workflow_dispatch: 
 
 jobs:
   build:
