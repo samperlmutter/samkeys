@@ -291,7 +291,7 @@
                &trans            &kp LS(N1)           &kp LS(N2)            &kp LS(N3)           &kp LS(N4)  &kp LS(N5)                                                            &kp LS(N6)           &kp LS(N7)            &kp LS(N8)               &trans                  &kp F11    &kp F12
                &trans                 &kp Q                &kp W                 &kp E                &kp R       &kp T                                                                 &kp Y                &kp U                 &kp I                &kp O                    &kp P   &kp BSLH
             &kp GRAVE  &my_home_mod LCTRL A  &my_home_mod LALT S  &my_home_mod LSHFT D  &my_home_mod LGUI F       &kp G                                                                 &kp H  &my_home_mod RGUI J  &my_home_mod RSHFT K  &my_home_mod RALT L  &my_home_mod RCTRL SEMI    &kp SQT
-               &trans                 &kp Z                &kp X                 &kp C                &kp V       &kp B    &lower    &kp TAB   &trans  &trans    &mo 2    &kp ESC       &kp N                &kp M             &kp COMMA              &kp DOT                 &kp FSLH  &kp MINUS
+               &trans                 &kp Z                &kp X                 &kp C                &kp V       &kp B    &lower    &kp TAB    &mo 2  &trans   &trans    &kp ESC       &kp N                &kp M             &kp COMMA              &kp DOT                 &kp FSLH  &kp MINUS
  &magic LAYER_Magic 0                &trans               &trans                &trans               &trans              &kp BSPC  &kp LSHFT  &kp DEL  &trans  &kp RET  &kp SPACE                       &kp LS(N9)            &kp LS(N0)             &kp LBKT                 &kp RBKT  &kp EQUAL
             >;
         };
