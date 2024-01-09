@@ -21,12 +21,12 @@
 #include <dt-bindings/zmk/rgb.h>
 
 /* Automatically generated layer name #define */
-#define LAYER_Engrammer 0
-#define LAYER_Engram 1
-#define LAYER_Dvorak 2
-#define LAYER_Workman 3
-#define LAYER_Colemak 4
-#define LAYER_QWERTY 5
+#define LAYER_QWERTY 0
+#define LAYER_Engrammer 1
+#define LAYER_Engram 2
+#define LAYER_Dvorak 3
+#define LAYER_Workman 4
+#define LAYER_Colemak 5
 #define LAYER_Lower 6
 #define LAYER_Typing 7
 #define LAYER_LeftPinky 8
@@ -5924,6 +5924,17 @@ macros {
         compatible = "zmk,keymap";
 
 
+        layer_QWERTY {
+            bindings = <
+               &kp F1               &kp F2               &kp F3               &kp F4                  &kp F5                                                                                                                                                                                                            &kp F6                &kp F7                &kp F8                   &kp F9               &kp F10
+            &kp EQUAL               &kp N1               &kp N2               &kp N3                  &kp N4                 &kp N5                                                                                                                                                   &kp N6                            &kp N7                &kp N8                &kp N9                   &kp N0              &kp BSLH
+            &kp GRAVE                &kp Q  &LeftRing2 (RALT,W)                &kp E                   &kp R                  &kp T                                                                                                                                                    &kp Y                             &kp U                 &kp I  &RightRing2 (RALT,O)                    &kp P             &kp MINUS
+    &cappy CAPSLOCK 0  &LeftPinky (LGUI,A)  &LeftRing1 (LALT,S)  &LeftMiddy (LCTL,D)     &LeftIndex (LSFT,F)  &plain LAYER_Typing G                                                                                                                                    &plain LAYER_Typing H              &RightIndex (LSFT,J)  &RightMiddy (LCTL,K)  &RightRing1 (LALT,L)  &RightPinky (LGUI,SEMI)               &kp SQT
+            &kp LSHFT                &kp Z                &kp X                &kp C                   &kp V                  &kp B      &thumb LAYER_Function ESC                      &kp UP  &kp DOWN  &kp LEFT               &kp RIGHT  &thumb LAYER_System ENTER                  &kp N                             &kp M             &kp COMMA               &kp DOT                 &kp FSLH             &kp RSHFT
+ &magic LAYER_Magic 0             &kp HOME            &kp PG_UP            &kp PG_DN  &thumb LAYER_Emoji END                         &thumb LAYER_Cursor BACKSPACE  &thumb LAYER_Number DELETE    &lower    &lower  &thumb LAYER_Mouse TAB  &space LAYER_Symbol SPACE                         &thumb_parang_left LAYER_World 0              &kp LBKT              &kp RBKT            &parang_right  &magic LAYER_Magic 0
+            >;
+        };
+
         layer_Engrammer {
             bindings = <
                &kp F1               &kp F2               &kp F3               &kp F4                  &kp F5                                                                                                                                                                                                                  &kp F6                &kp F7                &kp F8                &kp F9               &kp F10
@@ -5976,17 +5987,6 @@ macros {
     &cappy CAPSLOCK 0  &LeftPinky (LGUI,A)  &LeftRing1 (LALT,R)  &LeftMiddy (LCTL,S)     &LeftIndex (LSFT,T)  &plain LAYER_Typing D                                                                                                                                    &plain LAYER_Typing H              &RightIndex (LSFT,N)  &RightMiddy (LCTL,E)  &RightRing1 (LALT,I)  &RightPinky (LGUI,O)               &kp SQT
             &kp LSHFT                &kp Z                &kp X                &kp C                   &kp V                  &kp B      &thumb LAYER_Function ESC                      &kp UP  &kp DOWN  &kp LEFT               &kp RIGHT  &thumb LAYER_System ENTER                  &kp K                             &kp M             &kp COMMA               &kp DOT              &kp FSLH             &kp RSHFT
  &magic LAYER_Magic 0             &kp HOME            &kp PG_UP            &kp PG_DN  &thumb LAYER_Emoji END                         &thumb LAYER_Cursor BACKSPACE  &thumb LAYER_Number DELETE    &lower    &lower  &thumb LAYER_Mouse TAB  &space LAYER_Symbol SPACE                         &thumb_parang_left LAYER_World 0              &kp LBKT              &kp RBKT         &parang_right  &magic LAYER_Magic 0
-            >;
-        };
-
-        layer_QWERTY {
-            bindings = <
-               &kp F1               &kp F2               &kp F3               &kp F4                  &kp F5                                                                                                                                                                                                            &kp F6                &kp F7                &kp F8                   &kp F9               &kp F10
-            &kp EQUAL               &kp N1               &kp N2               &kp N3                  &kp N4                 &kp N5                                                                                                                                                   &kp N6                            &kp N7                &kp N8                &kp N9                   &kp N0              &kp BSLH
-            &kp GRAVE                &kp Q  &LeftRing2 (RALT,W)                &kp E                   &kp R                  &kp T                                                                                                                                                    &kp Y                             &kp U                 &kp I  &RightRing2 (RALT,O)                    &kp P             &kp MINUS
-    &cappy CAPSLOCK 0  &LeftPinky (LGUI,A)  &LeftRing1 (LALT,S)  &LeftMiddy (LCTL,D)     &LeftIndex (LSFT,F)  &plain LAYER_Typing G                                                                                                                                    &plain LAYER_Typing H              &RightIndex (LSFT,J)  &RightMiddy (LCTL,K)  &RightRing1 (LALT,L)  &RightPinky (LGUI,SEMI)               &kp SQT
-            &kp LSHFT                &kp Z                &kp X                &kp C                   &kp V                  &kp B      &thumb LAYER_Function ESC                      &kp UP  &kp DOWN  &kp LEFT               &kp RIGHT  &thumb LAYER_System ENTER                  &kp N                             &kp M             &kp COMMA               &kp DOT                 &kp FSLH             &kp RSHFT
- &magic LAYER_Magic 0             &kp HOME            &kp PG_UP            &kp PG_DN  &thumb LAYER_Emoji END                         &thumb LAYER_Cursor BACKSPACE  &thumb LAYER_Number DELETE    &lower    &lower  &thumb LAYER_Mouse TAB  &space LAYER_Symbol SPACE                         &thumb_parang_left LAYER_World 0              &kp LBKT              &kp RBKT            &parang_right  &magic LAYER_Magic 0
             >;
         };
 
