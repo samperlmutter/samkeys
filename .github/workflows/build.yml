@@ -36,14 +36,16 @@ jobs:
         run: |
           git config --local user.email "sam.perlmutter227@gmail.com"
           git config --local user.name "Sam Perlmutter"
-
       - name: Commit file
         run: |
           git add glove80.uf2
           git commit -m "Add generated glove80.uf2 file"
-
-      - name: Push changes
+      - name: Extract branch name
+        id: extract_branch
+        run: echo ::set-output name=branch::${GITHUB_REF#refs/heads/}
+      - name: Push changes  
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ steps.extract_branch.outputs.branch }}
           force: true
