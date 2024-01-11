@@ -266,17 +266,17 @@
     /* Custom Defined Behaviors */
 / {
     behaviors {
-    my_home_mod: my_home_mod {
-        compatible = "zmk,behavior-hold-tap";
-        flavor = "tap-preferred";
-        hold-trigger-on-release;
-        tapping-term-ms = <250>;
-        require-prior-idle-ms = <250>;
-        #binding-cells = <2>;
-        bindings = <&kp>, <&kp>;
-        retro-tap;
+	my_home_mod: my_home_mod {
+	    compatible = "zmk,behavior-hold-tap";
+	    flavor = "tap-preferred";
+	    hold-trigger-on-release;
+	    tapping-term-ms = <250>;
+	    require-prior-idle-ms = <250>;
+	    #binding-cells = <2>;
+	    bindings = <&kp>, <&kp>;
+	    retro-tap;
+	};
     };
-};
 };
 
     /* Automatically generated keymap */
